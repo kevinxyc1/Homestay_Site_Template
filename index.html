@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Job Matcher!</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+	<!--Click and scroll to specific section javascript-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("a").on('click', function(event) {
+			if (this.hash !== "") {
+			event.preventDefault();
+			var hash = this.hash;
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 800, function(){
+				window.location.hash = hash;
+			});
+			} 
+		});
+	});
+	</script>
+</head>
+
+<body class="body">
+	<!--navigation bar-->
+	<nav class="stroke" id="n">
+		<ul>
+		  <li><a href="#p">Photos</a></li>
+		  <li><a href="#t">Homestay</a></li>
+		  <li><a href="#c">Commute</a></li>
+		  <li><a href="#r">Review</a></li>
+		</ul>
+	  </nav>
+	<!--photo slideshow-->
+	<div class="photos" id="p">
+		<img class="mySlides" src="img/1.jpg">
+		<img class="mySlides" src="img/2.jpg">
+		<img class="mySlides" src="img/3.jpg">
+		<img class="mySlides" src="img/4.jpg">
+		<img class="mySlides" src="img/5.jpg">
+		<img class="mySlides" src="img/6.jpg">
+		<img class="mySlides" src="img/7.jpg">
+
+		<button class="prev" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="next" onclick="plusDivs(+1)">&#10095;</button>
+	</div>
+	<!--Slideshow javascript-->
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+		
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+		
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block";  
+		}
+	</script>
+
+
+	<!--Homestay Section-->
+	<div class="homestay" id="t">
+
+		<!--Rooms and Facilities Section-->
+		<h1>Rooms and Facilities</h1>
+		<!--Rooms-->
+		<table class="tab-hotel">
+			<tr>
+			  <th align="left"><img src="img/ic_hotel.svg"></th>
+			  <th>Student rooms:</th>
+			  <td>Upper floor rooms: 3</td>
+			  <td>Basement rooms: 3</td>
+			</tr>
+		</table>
+		<!--Washrooms-->
+		<table class="tab-washroom">
+			<tr>
+			  <th align="left"><img src="img/ic_hot_tub.svg"></th>
+			  <th align="left" style="position: relative; left: 27px;">Washrooms:</th>
+			  <td align="left" style="position: relative; left: 5px;"">2 for students</td>
+			</tr>
+		</table>
+		<!--Facilities-->
+		<div class= "section">
+			<table class="tab-facility-title">
+				<tr>
+				  <th align="left"><img src="img/Star.svg"></th>
+				  <th align="left" style="position: relative; left: 31px; bottom: 2px;">Access to facilities:</th>
+				</tr>
+			</table>
+			<table class="tab-facility">
+					<tbody>
+						<tr>
+							<td><img src="img/ic_check.svg"></td>
+							<td>Water</td>
+							<td><img src="img/ic_check.svg" style="position: relative; left: 65px;"></td>
+							<td style="position: relative; left: 65px;">Electricity</td>
+							<td><img src="img/ic_check.svg"></td>
+							<td>Heating</td>
+						</tr>
+						<tr>
+							<td><img src="img/ic_check.svg"></td>
+							<td>Bed</td>
+							<td><img src="img/ic_check.svg" style="position: relative; left: 65px;"></td>
+							<td style="position: relative; left: 65px;">Mirror</td>
+							<td><img src="img/ic_check.svg"></td>
+							<td>Washroom</td>
+						</tr>
+						<tr>
+							<td><img src="img/ic_check.svg"></td>
+							<td>Desk</td>
+							<td><img src="img/ic_check.svg" style="position: relative; left: 65px;"></td>
+							<td style="position: relative; left: 65px;">Lamp</td>
+							<td><img src="img/ic_check.svg"></td>
+							<td>Wardrobe</td>
+						</tr>
+						<tr>
+							<td><img src="img/ic_check.svg"></td>
+							<td>Wifi</td>
+							<td><img src="img/ic_check.svg" style="position: relative; left: 65px;"></td>
+							<td style="position: relative; left: 65px;"> Washer &amp; Dryer</td>
+						</tr>
+					</tbody>
+			</table>
+			<br>
+			<hr>
+		</div>
+
+		<!--Members Section-->
+		<h1>Members</h1>
+		<br>
+		<div class="section">
+				<!--Family Members-->
+				<img src="img/ic_group.svg">
+				<table class="tab-fam">
+					<tr>
+				 	 	<th>Family Members</th>
+						<th>Age Range</th>
+						<th>Continent of Birth</th>
+						<th>Occupation Category</th>
+					</tr>
+					<tr>
+						<td style="position: relative; left: 18px;">Female host</td>
+						<td style="position: relative; left: 16px;">30 - 39</td>
+						<td style="position: relative; left: 21px;">North America</td>
+						<td style="position: relative; left: 24px;">Utilities</td>
+					</tr>
+					<tr>
+						<td style="position: relative; left: 18px;">Mother</td>
+						<td style="position: relative; left: 16px;">60 - 69</td>
+						<td style="position: relative; left: 21px;">North America</td>
+						<td style="position: relative; left: 24px;">Utilities</td>
+					</tr>
+				</table>
+			
+		</div>
+		<div class="section">
+			<!--Pet Member-->
+			<img src="img/ic_pets.svg" style="position:relative; ">
+			<table class="tab-pet">
+				<tr>
+					<th style="position: relative; right: 7px; ">Pets</th>
+					<td style="position: relative; left: 100px; ">Cats: 0</td>
+					<td style="position: relative; left: 90px;">Dogs: 2</td>
+					<td style="position: relative; left: 125px; ">Other Pets: None</td>
+				</tr>
+			</table>
+		
+			<hr>
+		</div>
+			
+		<!--Meals Section-->
+		<h1>Meals</h1>
+
+		<table class="tab-meal">
+			<tr>
+				<th><img src="img/ic_local_dining.svg"></th>
+				<th>Breakfast:</th>
+				<td>Host prepares breakfast for students</td>
+			</tr>
+			<tr>
+				<th><img src="img/ic_local_dining.svg"></th>
+				<th style="position: relative; right: 10px;">Lunch:</th>
+				<td>No lunch provided</td>
+				</tr>
+			<tr>
+				<th><img src="img/ic_local_dining.svg"></th>
+				<th style="position: relative; right: 8px;">Dinner:</th>
+				<td>Host prepares dinner for students</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<hr>
+
+	</div>
+	
+	<!--Commute Section Section-->
+	<div class="commute" id="c">
+		<br>
+		<h1>Commute</h1>
+		<br>
+		<div id="googleMap" style="width:100%;height:400px;"></div>
+		<!--Google Maps API Javascript-->
+		<script>
+			function myMap() {
+			var mapProp= {
+			  center:new google.maps.LatLng(43.819791, -79.350482),
+			  zoom:13,
+			};
+			
+			var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			//set location marker to a circle
+			var myCity = new google.maps.Circle({
+				center:new google.maps.LatLng(43.819791, -79.350482),
+				radius:1000,
+				strokeColor:"#0000FF",
+				strokeOpacity:0.8,
+				strokeWeight:2,
+				fillColor:"#0000FF",
+				fillOpacity:0.4
+			});
+			myCity.setMap(map);
+			}
+		</script>
+			
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDN9fiPAdflVPOCRxoa56I_-heZq94DHmQ&callback=myMap"></script>
+		<br>
+		<br>
+		<hr>
+	</div>
+	
+	<br>
+
+	<!--Review Section-->
+	<h1 style="font-family: 'Domine', serif;">Review</h1>
+	<div class="review" id="r">
+		<h2>Homadorma Staff</h2>
+		<h4>Housing expert interviewed on 2018-08-15</h4>
+		<table class="tab-review">
+			<tr>
+			  <th><img src="img/Star.svg"></th>
+			  <th><img src="img/Star.svg"></th>
+			  <th><img src="img/Star.svg"></th>
+			  <th><img src="img/Star.svg"></th>
+			  <th><img src="img/Star.svg"></th>
+			</tr>
+		</table>
+		<p>Student rooms and common areas are nice and clean. Host is very warm and friendly. Highly recommended!</p>
+		
+		<br>
+		<h2>John</h2>
+		<h4>From China, Attends University of Toronto</h4>
+		<h4>Student stayed from 2019-01-18</h4>
+		<table class="tab-review">
+			<tr>
+			  <th><img src="img/Star.svg"></th>
+			  <th><img src="img/Star.svg"></th>
+			  <th><img src="img/Star.svg"></th>
+			  <th><img src="img/Star.svg"></th>
+			  <th><img src="img/Star.svg"></th>
+			</tr>
+		</table>
+		<p>This is a good homestay! big house and big family. Great location easy for taking public transportation. Lots of nice animals, etc.</p>
+		<br>
+	</div>
+	
+</body>
+</html>

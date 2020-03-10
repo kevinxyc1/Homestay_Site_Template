@@ -1,0 +1,177 @@
+
+/* Navigation Bar */
+nav {
+  margin: auto;
+  position: relative;
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: 0px 5px 0px #dedede;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 20px 34px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  font-size: 120%;
+  margin: 0 10px;
+  font-family: 'Domine', serif;
+
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+
+/* underline stroke in nav bar */
+nav.stroke ul li a{
+  position: relative;
+}
+nav.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+/* left & right buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* body */
+.body{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  width: 50%;
+  margin: auto;
+  
+}
+
+/* photo slideshow */
+.mySlides {
+  display:none;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.photos{
+  align-items: center;
+  position: relative;
+  right: 20px;
+  margin: auto;
+  display: block;
+  padding-bottom: 50px;
+}
+
+
+/* homestay section */
+.homestay{
+  font-family: 'Domine', serif;
+}
+
+.tab-hotel{
+  width: 100%;
+  border-spacing: 10px;
+}
+
+.tab-washroom{
+  width: 60%;
+  border-spacing: 10px;
+}
+
+.tab-facility-title{
+  width: 40%;
+  border-spacing: 10px;
+}
+
+.tab-facility{
+  width: 100%;
+  border-spacing: 10px;
+}
+
+
+
+hr{
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.section{
+  padding-bottom: 30px;
+}
+
+.tab-meal{
+  width: 100%;
+  border-spacing: 10px;
+}
+
+
+.tab-fam{
+  width: 100%;
+  border-spacing: 10px;
+  position: relative;
+  left: 30px;
+  bottom: 30px;
+}
+
+.tab-pet{
+  width: 100%;
+  border-spacing: 10px;
+  position: relative;
+  left: 30px;
+  bottom: 30px;
+}
+
+/* commute and review section */
+.commute, .review{
+  font-family: 'Domine', serif;
+}
+
+
+
